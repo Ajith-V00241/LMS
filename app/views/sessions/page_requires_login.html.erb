@@ -1,0 +1,19 @@
+<div class="fullPage" >
+	<div class="header" >
+		<%= link_to image_tag('/assets/bookLogo.jpg'), '/books' , :class=>'logo' %>
+
+		<center>
+			<h1 > LIBRARY MANAGEMENT SYSTEM</h1>
+			<p> A platform to search your favorite book </p>
+		</center>
+		<div class="tab">
+			<div class="member_lib"></div>
+		</div>
+	</div>
+
+	<h1>You have access to this page, <%= current_user.username %></h1>
+
+	<div class="footer">
+		Visit Soon
+	</div>
+</div>

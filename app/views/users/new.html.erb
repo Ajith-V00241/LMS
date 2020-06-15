@@ -1,0 +1,55 @@
+<div class="fullPage">
+	<center>
+		<div class ="signUpBox" >
+			<h1 style="color: #000;"> Sign Up: New member </h1>
+
+			<%= form_for @user do |f| %>
+			<table class="signUpTable">
+				<tr>
+					<td> <%= f.label :username %> </td>
+					<td> <%= f.text_field :username %> </td>
+				</tr>
+
+				<tr>
+					<td> <%= f.label :password %> </td>
+					<td> <%= f.text_field :password %> </td>
+				</tr>
+				
+				<tr>
+					<td> <%= f.label :full_name %> </td>
+					<td> <%= f.text_field :full_name %> </td>
+				</tr>
+
+				<tr>
+					<td> <%= f.label :phone %> </td>
+					<td> <%= f.text_field :phone %> </td>
+				</tr>
+				
+				<tr>
+					<td> <%= f.label :address %> </td>
+					<td> <%= f.text_area :address %> </td>
+				</tr>
+				
+				<tr>
+					<td> <%= f.label :date_of_membership %> </td>
+					<td> <%= f.text_field :date_of_membership %> </td>
+				</tr>
+				
+				<tr>
+					<td> <%= f.label :total_checkout %> </td>
+					<td> <%= f.text_field :total_checkout %> </td>
+				</tr>
+			</table>
+				<br>
+
+				<%= f.submit "Sign Up", class: 'signUpButton' %>
+			<% end %>
+		</div>
+	</center>
+
+
+
+	<div class="footer">
+		Visit Soon
+	</div>
+</div>

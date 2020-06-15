@@ -1,0 +1,26 @@
+<div class="fullPage">
+
+	<div class="loginbox">
+		<h1>Login as Member</h1>
+		<%= form_tag '/login' do %>
+			<table class="loginTable" >
+				<tr>
+					<td> <%= label_tag :username %> </td>
+					<td> <%= text_field_tag :username %></td>
+				</tr>
+				<tr>
+					<td> <%= label_tag :password %> </td>
+					<td> <%= password_field_tag :password %></td>
+				</tr>
+			</table>
+			<%= submit_tag "Login" %>
+		<% end %>
+
+	</div>
+
+
+
+	<div class="footer">
+		Visit Soon
+	</div>
+</div>

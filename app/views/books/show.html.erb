@@ -1,0 +1,67 @@
+<div class="fullPage" >
+	<div class="header" >
+		<%= link_to image_tag('/assets/bookLogo.jpg'), '/books' , :class=>'logo' %>
+
+		<center>
+			<h1 > LIBRARY MANAGEMENT SYSTEM</h1>
+			<p> A platform to search your favorite book </p>
+		</center>
+		<div class="tab">
+			<div class="contents">
+				Welcome, <%= current_user.full_name %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				<a href='/logOut'>Logout</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+			
+		</div>
+	</div>
+
+
+	<div class="container" >
+		<center>
+			<div class="showBlock" >
+					<img src="/assets/bookLogo.jpg" >
+			</div>
+			<div class="showDetails">
+				<h2>Book Details</h2>
+				<table class="bookDetails">
+					<tr>
+						<td class="TableTag">Title</td>
+						<td> : </td>
+						<td> <%= @book.title %> </td>
+					</tr>
+					<tr>
+						<td class="TableTag">Author</td>
+						<td> : </td>
+						<td> <%= @book.author %> </td>
+					</tr>
+					<tr>
+						<td class="TableTag">Publisher </td>
+						<td> : </td>
+						<td> <%= @book.publisher %> </td>
+					</tr>
+					<tr>
+						<td class="TableTag">Language</td>
+						<td> : </td>
+						<td> <%= @book.language %> </td>
+					</tr>
+					<tr>
+						<td class="TableTag">Description</td>
+						<td> : </td>
+						<td> <%= @book.description %> </td>
+					</tr>
+
+				</table>
+
+			</div>
+
+			<%= link_to "Lend Book", '/books/thank' %>
+		</center>
+	</div>
+
+
+	<div class="footer">
+		Visit Soon
+	</div>
+</div>
