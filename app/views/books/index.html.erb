@@ -8,17 +8,20 @@
 		</center>
 		<div class="tab">
 			<div class="contents">
-				
-
-
-
 				Welcome, <%= current_user.full_name %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				<a href='/users/lendedBooks'>Lended books</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 				<a href='/logOut'>Logout</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
 			</div>
-			
+			<%= form_tag(searched_path, method: :get) do %>
+				<%= text_field_tag(:search, params[:search] ,:placeholder=>"Search By Name") %>
+				<%= submit_tag ("Search") %>
+			<% end %>
+
 		</div>
+
 	</div>
 
 	<div class="container" >
@@ -26,7 +29,7 @@
 			<center>
 				<%= link_to book_path(book) do %>
 					<div class="thumbnail">
-						<img src="/assets/bookLogo.jpg">
+						<img src='<%= book.image %>' >
 						<div class="caption">
 							<h3 class="title"> <%= book.title %></h3>
 							<p class="author"><%= book.author %></p>
@@ -34,6 +37,7 @@
 					</div>
 				<% end %>
 			</center>
+			<br><br><br><br>
 		<% end %>
 
 	</div>

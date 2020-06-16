@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   get 'authorized', to: 'sessions#page_requires_login'
 
   get 'books', to: 'books#index'
+  get 'searched_books', to: 'books#searchedIndex', as: :searched
   get '/books/thank', to: 'books#thank'
   get '/books/:id' => 'books#show', as: :book
+  get '/books/lend/:id' => 'books#lend', as: :lend
+  get '/books/returnBook/:id' => 'books#returnBook', as: :returnBook
+  get '/users/lendedBooks' => 'users#lendedBooks'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

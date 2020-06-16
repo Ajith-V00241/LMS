@@ -103,6 +103,7 @@ body
 	margin: 0;
 	padding: 0;
 }
+
 .tab .contents{
 	display: inline-block;
 	font-size: 22px;
@@ -152,6 +153,67 @@ a:hover .thumbnail img {
 	margin: 4px 40px ;
 }
 
+/* Lended Books Page */
+.lendedBookBox
+{
+  font-size: 20px;
+  background: rgba(76, 175, 80, 0.3);
+  border: no-border; 
+  width: 60%;
+  height: 350px;
+  margin-top:5%;
+  color: white;
+  overflow: auto;
+}
+
+.lendedBookBox table
+{
+  text-align: center;
+  width: 100%;
+}
+.lendedBookBox th, td
+{
+  padding: 10px 0px;
+}
+
+.lendedBookBox th 
+{
+  color: #000;
+  background-color: rgba(0, 128, 0, 0.8);
+}
+
+.lendedBookBox td a
+{
+  text-decoration: none;
+  background-color: rgba(0, 128, 0, 0.8);
+  border-radius: 5px;
+  font-size: 17px;
+}
+.lendedBookBox td a:visited
+{
+  text-decoration: none;
+  color: blue;
+}
+
+
+.lendedBookBox #t1
+{
+  width: 10%;
+}
+.lendedBookBox #t2
+{
+  width: 45%;
+}
+.lendedBookBox #t3
+{
+  width: 30%;
+}
+.lendedBookBox #t4
+{
+  width: 15%;
+}
+
+
 /* Thank Page */
 .thank{
 	font-size: 55px;
@@ -167,7 +229,7 @@ a:hover .thumbnail img {
   background-color: #000;
   color: #fff;
   padding: 50px 0 35px 0;
-  position: fixed;
+  //position: fixed;
   width: 100%;
   left: 0;
   bottom: 0;

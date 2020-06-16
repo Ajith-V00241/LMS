@@ -12,4 +12,8 @@ class UsersController < ApplicationController
   	redirect_to '/welcome', notice: "New user created"
 
   end
+
+  def lendedBooks
+    @lendedBooks=LendedBook.where(username: current_user.username)
+  end
 end
